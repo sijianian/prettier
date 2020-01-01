@@ -673,12 +673,8 @@ function printOpeningTag(path, options, print) {
             needsToBorrowLastChildClosingTagEndMarker(node.parent))
             ? ""
             : node.isSelfClosing
-            ? forceNotToBreakAttrContent
-              ? " "
-              : line
-            : forceNotToBreakAttrContent
-            ? ""
-            : softline
+            ? " "
+            : ""
         ]),
     node.isSelfClosing ? "" : printOpeningTagEnd(node)
   ]);
